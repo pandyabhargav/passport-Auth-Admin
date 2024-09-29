@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controller/controller');
-const isAuthenticated = require('../controller/controller');
+const isAuthenticated = require('../Modules/isAuth');
+
 
 // Routes to render forms
 router.get('/', controller.defaultCon);
-router.get('/singup' ,controller.signupForm);
+router.get('/singup',controller.signupForm);
 router.get('/login' ,controller.loginForm);
 
 // Use POST for form submission (e.g., signup and login data)

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts/dist/apexcharts.css">
     <link rel="stylesheet" href="css/index.css">
+  
 <body>
     
     <div class="load" id="loaderContainer">
@@ -29,15 +30,16 @@
                 </div>
                 <div class="custom-navbar scroll-bar">
                     <ul class="p-3">
-                        <li class="text-white d-flex text-start align-items-center"><i class="fa-solid fa-house-user me-3"></i> <span>Dashboard</span></li>
+                        <li class="text-white d-flex text-start align-items-center"><i class="fa-solid fa-house-user me-3"></i> <span><a href="/">Dashboard</a></span></li>
                         <li class="text-white d-flex text-start align-items-center" id="toggleProduct">
                             <i class="fa-solid fa-shop me-3"></i>
-                            <span class="flex-grow-1">Product</span>
+                            <span class="flex-grow-1">Blogs</span>
                             <i class="fa-solid fa-chevron-right"></i>
                         </li>
                         <ul id="subList" class="text-white sub-list">
-                            <li><a href="/Foodlist">-<span class="ms-3">Products</span></a></li>
-                            <li><a href="/Food-add">-<span class="ms-3">Add New Product</span></a></li>
+                            <li><a href="/all">-<span class="ms-3">All Blogs</span></a></li>
+                            <li><a href="/myblog">-<span class="ms-3">My Blogs </span></a></li>
+                            <li><a href="/add">-<span class="ms-3">Add Blogs </span></a></li>
                         </ul>
                     </ul>
                 </div>
@@ -1218,9 +1220,15 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             document.getElementById('loaderContainer').style.display = 'none';
             // document.getElementById('content').style.display = 'block';
-        }, 2000); // Change the delay as needed
+        }, 1000); // Change the delay as needed
 
 });
+
+document.getElementById('toggleProduct').addEventListener('click', function() {
+    const subList = document.getElementById('subList');
+    subList.classList.toggle('expanded'); // Toggle the expanded class
+});
+
 
 </script>
 </body>

@@ -133,7 +133,12 @@ p {
     /* Position the background image absolutely */
     z-index: -1;
   }
-  
+  .card-img, .card-img-bottom, .card-img-top {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+  }
   .scroll-bar {
     overflow-y: scroll;
     height: 100%;
@@ -178,6 +183,8 @@ p {
   .active {
     background-color: #352e23;
   }
+
+
   
   .custom-navbar ul li:hover {
     background-color: #352e23;
